@@ -1,0 +1,45 @@
+{
+  "ProjectName": "TabStribTest",
+  "ProjectGuid": "af15eb8f-9e59-4ab2-9c85-b2a7a8b7096b",
+  "projectVersion": 1,
+  "AppIdentifier": "com.telerik.TabStribTest",
+  "DisplayName": "TabStribTest",
+  "Author": "",
+  "Description": "TabStribTest",
+  "BundleVersion": "1.0",
+  "AndroidVersionCode": "1",
+  "iOSDeviceFamily": [
+    "1",
+    "2"
+  ],
+  "iOSBackgroundMode": [],
+  "ProjectTypeGuids": "{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}",
+  "FrameworkVersion": "4.0.0",
+  "AndroidPermissions": [
+    "android.permission.INTERNET"
+  ],
+  "DeviceOrientations": [
+    "Portrait",
+    "Landscape"
+  ],
+  "AndroidHardwareAcceleration": "true",
+  "iOSStatusBarStyle": "Default",
+  "Framework": "Cordova",
+  "WP8TileTitle": "",
+  "WP8Publisher": "",
+  "WP8Capabilities": [
+    "ID_CAP_NETWORKING",
+    "ID_CAP_WEBBROWSERCOMPONENT"
+  ],
+  "WP8Requirements": [],
+  "WP8PublisherID": "{37a7bbf4-ac91-4124-bf89-f25cbd08170b}",
+  "WP8ProductID": "{2ecac7c2-5fa5-478e-b6db-967ac1a85324}",
+  "WPSdk": "8.0",
+  "WP8PackageIdentityName": "1234Telerik.TabStribTest",
+  "WP8WindowsPublisherName": "CN=Telerik",
+  "WP8SupportedResolutions": [
+    "ID_RESOLUTION_WVGA",
+    "ID_RESOLUTION_WXGA",
+    "ID_RESOLUTION_HD720P"
+  ]
+}
