@@ -1,52 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+  <head>
 
-<head>
-    <title></title>
-    <meta charset="utf-8">
-    <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet">
-    <link href="styles/main.css" rel="stylesheet">
+    <title>AngularJS Routing example</title>
 
-    <script src="cordova.js"></script>
-    <script src="kendo/js/jquery.min.js"></script>
-    <script src="kendo/js/kendo.mobile.min.js"></script>
-    <script src="app.js"></script>
-</head>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
 
-<body id="kendoUiMobileApp">
-    <script src="components/contactsView/index.js"></script>
-    <script src="components/settingsView/index.js"></script>
-    <script src="components/homeView/index.js"></script>
-    <div data-role="layout" data-id="main">
-        <header data-role="header">
-            <div data-role="navbar">
-                <span data-role="view-title"></span>
-            </div>
-        </header>
+    <style>
+		body {
+		  padding-top: 10px;
+		  background-color: #F5F5F5;
+		}
 
-        <footer data-role="footer">
-            <div data-role="tabstrip" id="navigation-container">
-                <a href="components/homeView/view.html" data-icon="home">Home View</a>
-                <a href="components/settingsView/view.html" data-icon="settings">Settings</a>
-                <a href="components/contactsView/view.html" data-icon="contacts">Contacts</a>
-            </div>
-        </footer>
-    </div>
+    </style>
 
-    <div data-role="layout" data-id="main-nonav">
-        <header data-role="header">
-            <div data-role="navbar">
-                <span data-role="view-title"></span>
-            </div>
-        </header>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
 
-        <footer data-role="footer">
-        </footer>
-    </div>
-    <!-- START_CUSTOM_CODE_kendoUiMobileApp -->
-    <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+  <body ng-app="sampleApp">
 
-    <!-- END_CUSTOM_CODE_kendoUiMobileApp -->
-</body>
+    <div class="container">
+		<div class="row">
 
+		<div class="col-md-9">
+
+		<table class="table table-striped">
+			<thead>
+			  <tr>
+				<th>#</th><th>Order No.</th><th>Details</th><th></th>
+			  </tr>
+			</thead>
+			<tbody>
+			  <tr>
+				<td>1</td><td>1234</td><td>15" Samsung Laptop</td>
+				<td><a href="#ShowOrder/1234">show details</a></td>
+			  </tr>
+			  <tr>
+				<td>2</td><td>5412</td><td>2TB Seagate Hard drive</td>
+				<td><a href="#ShowOrder/5412">show details</a></td>
+			  </tr>
+			  <tr>
+				<td>3</td><td>9874</td><td>D-link router</td>
+				<td><a href="#ShowOrder/9874">show details</a></td>
+			  </tr>
+			</tbody>
+		  </table>
+
+
+		  	<div ng-view></div>
+
+		</div>
+
+		</div>
+
+    </div><!-- /.container -->
+
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+	<script src="app.js"></script>
+
+  </body>
 </html>

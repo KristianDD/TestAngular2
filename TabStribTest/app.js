@@ -1,49 +1,18 @@
-'use strict';
+var sampleApp = angular.module('sampleApp', []);
 
-(function() {
-    var app = {
-        data: {}
-    };
+sampleApp.config(['$routeProvider',
+  function($routeProvider) {
+    $routeProvider.
+      when('/ShowOrder/:orderId', {
+	templateUrl: 'templates/show_order.html',
+	controller: 'ShowOrderController'
+      });
+}]);
 
-    var bootstrap = function() {
-        $(function() {
-            app.mobileApp = new kendo.mobile.Application(document.body, {
-                transition: 'slide',
-                skin: 'nova',
-                initial: 'components/homeView/view.html'
-            });
-        });
-    };
 
-    if (window.cordova) {
-        document.addEventListener('deviceready', function() {
-            if (navigator && navigator.splashscreen) {
-                navigator.splashscreen.hide();
-            }
-            bootstrap();
-        }, false);
-    } else {
-        bootstrap();
-    }
+sampleApp.controller('ShowOrderController', function($scope, $routeParams) {
 
-    app.keepActiveState = function _keepActiveState(item) {
-        var currentItem = item;
-        $('#navigation-container li a.active').removeClass('active');
-        currentItem.addClass('active');
-    };
+	
+	$scope.order_id = $routeParams.orderId;
 
-    window.app = app;
-
-    app.isOnline = function() {
-        if (!navigator || !navigator.connection) {
-            return true;
-        } else {
-            return navigator.connection.type !== 'none';
-        }
-    };
-}());
-
-// START_CUSTOM_CODE_kendoUiMobileApp
-// Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes
-
-// END_CUSTOM_CODE_kendoUiMobileApp
+});
